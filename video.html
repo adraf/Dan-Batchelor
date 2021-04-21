@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Videography - Dan Batchelor</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="name-logo">
+      <img src="./images/DB-Logo.PNG" alt="Dan Batchelor Logo">
+      <a href="./index.html">Dan Batchelor</a>
+    </div>
+    <!-- Hamburger Menu -->
+    <button class="burger"></button>
+    <nav class="navbar">
+      <ul>
+        <li><a class="menuLink" href="./index.html">Home</a></li>
+        <li><a class="menuLink" href="./about.html">About</a></li>
+        <div class="smlbrgdropdown">
+          <li class="smlbrgdropbtn">Work</li>
+            <div class="brgdropdown-content">
+              <a href="./hitp.html">NikeTown London x HITP</a>
+              <a href="./airmax.html">NikeTown London Air Max 90</a>
+              <a href="./blankspace.html">BlankSpace Sessions</a>
+              <a href="./blankspacelive.html">BlankSpace Live</a>
+              <a href="./productphoto.html">Product Photography</a>
+              <a href="./aftereffects.html">After Effects Animation</a>
+              <a href="./design.html">Design</a>
+              <a href="./vegan.html">Vegan Allsorts</a>
+            </div>
+        </div>
+        <li><a class="menuLink" href="./photo.html">Photography</a></li>
+        <li><a class="menuLink" href="./video.html">Videography</a></li>
+        <li><a class="menulink" href="./contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- Web Menu -->
+    <nav class="top-links" id="photovid-nav">
+      <ul>
+        <a href="./index.html"><li>Home</li></a>
+        <a href="./about.html"><li>About</li></a>
+        <div class="smalldropdown">
+          <a><li class="navdropbtn">Work</li></a> 
+           <div class="smalldropdown-content">
+             <a href="./hitp.html">NikeTown London x HITP</a>
+             <a href="./airmax.html">NikeTown London Air Max 90</a>
+             <a href="./blankspace.html">BlankSpace Sessions</a>
+             <a href="./blankspacelive.html">BlankSpace Live</a>
+             <a href="./productphoto.html">Product Photography</a>
+             <a href="./aftereffects.html">After Effects Animation</a>
+             <a href="./design.html">Design</a>
+             <a href="./vegan.html">Vegan Allsorts</a>
+           </div>
+         </div>
+        <a href="./photo.html"><li>Photography</li></a>
+        <a id="disable-hover" style="border-bottom: 2.5px solid black;" href="./video.html"><li>Videography</li></a>
+        <a href="./contact.html"><li>Contact</li></a>
+      </ul>
+    </nav>
+    <nav class="socials">
+      <a href="https://www.instagram.com/danbatch_/"><img class="instagram" src="./images/iconmonstr-instagram-14-240.png" alt="Instagram"></a>
+      <a href="https://www.youtube.com/channel/UC_rRZNcKHSQAZaB0SF8sqXA"><img class="youtube" src="./images/iconmonstr-youtube-6-240.png" alt="YouTube"></a>
+      <a href="https://www.facebook.com/bearbatch"><img class="facebook" src="./images/iconmonstr-facebook-3-240.png" alt="facebook"></a>
+    </nav>
+  </header>
+  <main class="video-main">
+    <h2>Videography</h2>
+      <div class="dropdown">
+        <button class="dropbtn">Filter Projects</button>
+        <ul class="dropdown-content">
+            <li class="filter-list-item" id="all" onclick="showAll()">All Items</li>
+            <li class="filter-list-item" onclick="showCategory('category-nike')">Nike</li>
+            <li class="filter-list-item" onclick="showCategory('category-BSpace')">BlankSpace</li>
+            <li class="filter-list-item" onclick="showCategory('category-AfterEff')">After Effects</li>
+            <li class="filter-list-item" onclick="showCategory('category-vegan')">Vegan Allsorts</li>
+          </ul>
+      </div>
+    <div class="video-boxes">
+      <div class="item category-nike">
+        <video src="./All_Content/NikeTown/Hard-in-the-Paint-Installation/Nike x Hard in the Paint.m4v" controls></video>
+        <h4 class="video-title">Nike x Hard In The Paint</h4>
+      </div>
+      <div class="item category-nike">
+        <video src="./All_Content/NikeTown/BSMNT-Air-Max-90-Launch/Nike x BSMNT Air Max 90 London Launch - NikeTown London.mp4" controls></video>
+        <h4 class="video-title">Nike x BSMNT Air Max 90 Launch</h4>
+      </div>
+      <div class="item category-BSpace">
+        <video src="./All_Content/BlankSpace/Sessions Trailer (BTS).m4v" controls></video>
+        <h4 class="video-title">Blankspace Sessions Trailer</h4>
+      </div>
+      <div class="item category-BSpace">
+        <video src="./All_Content/BlankSpace/Cheriton Trailer.m4v" controls></video>
+        <h4 class="video-title">Cheriton - Blankspace Sessions</h4>
+      </div>
+      <div class="item category-BSpace">
+        <video src="./All_Content/BlankSpace/Fred Fredas Trailer.m4v" controls></video>
+        <h4 class="video-title">Fred Fredas - Blankspace Sessions</h4>
+      </div>
+      <div class="item category-BSpace">
+        <video src="./All_Content/BlankSpace/Oliver Say Trailer.m4v" controls></video>
+        <h4 class="video-title">Oliver Say - Blankspace Sessions</h4>
+      </div>
+      <div class="item category-BSpace">
+        <video src="./All_Content/BlankSpace/SHANTEH Trailer.m4v" controls></video>
+        <h4 class="video-title">Shant&eacute;h - Blankspace Sessions</h4>
+      </div>
+      <div class="item category-BSpace">
+        <video src="./All_Content/BlankSpace/BlankSpace-Live Dec '19.M4V" controls></video>
+        <h4 class="video-title">Blankspace December 2019</h4>
+      </div>
+      <div class="item category-AfterEff">
+        <video src="./All_Content/After-Effects-Promos/GBH The Collective Playlist Promo.MP4" controls></video>
+        <h4 class="video-title">GBH The Collective - Instagram Advert</h4>
+      </div>
+      <div class="item category-AfterEff">
+        <video src="./All_Content/After-Effects-Promos/New Intro Test.MP4" controls></video>
+        <h4 class="video-title">After Effects Text Title Sequence</h4>
+      </div>
+      <div class="item category-AfterEff">
+        <video src="./All_Content/After-Effects-Promos/Soliheen - Experiments Album Release.mp4" controls></video>
+        <h4 class="video-title">Soliheen - Experiments Album Release</h4>
+      </div>
+      <div class="item category-AfterEff">
+        <video src="./All_Content/After-Effects-Promos/SebSizzles Instagram Logo Animation.mp4" controls></video>
+        <h4 class="video-title">SebSizzles Instagram Logo Animation</h4>
+      </div>
+      <div class="item category-vegan">
+        <video src="./All_Content/Vegan-Allsorts/100k (60 Seconds)(Final).M4V" controls></video>
+        <h4 class="video-title">Vegan Allsorts 60 Seconds</h4>
+      </div>
+      <div class="item category-vegan">
+        <video src="./All_Content/Vegan-Allsorts/100k Extended (Final).M4V" controls></video>
+        <h4 class="video-title">Vegan Allsorts Extended Cut</h4>
+      </div>
+      <div class="item category-vegan">
+        <video src="./All_Content/Vegan-Allsorts/IMG_8770.m4v" controls></video>
+        <h4 class="video-title">Vegan Allsorts Video One</h4>
+      </div>
+      <div class="item category-vegan">
+        <video src="./All_Content/Vegan-Allsorts/Vegan Allsorts Video 2 (Final).M4V" controls></video>
+        <h4 class="video-title">Vegan Allsorts Video Two</h4>
+      </div>
+      <div class="item category-vegan">
+        <video src="./All_Content/Vegan-Allsorts/Vegan Allsorts Video 3 (Final).M4V" controls></video>
+        <h4 class="video-title">Vegan Allsorts Video Three</h4>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <nav class="socials">
+      <a href="https://www.instagram.com/danbatch_/"><img class="instagram" src="./images/iconmonstr-instagram-14-240.png" alt="Instagram"></a>
+      <a href="https://www.youtube.com/channel/UC_rRZNcKHSQAZaB0SF8sqXA"><img class="youtube" src="./images/iconmonstr-youtube-6-240.png" alt="YouTube"></a>
+      <a href="https://www.facebook.com/bearbatch"><img class="facebook" src="./images/iconmonstr-facebook-3-240.png" alt="facebook"></a>
+    </nav>
+    <div class="madeby">
+      Developed by&nbsp;<a href="https://www.instagram.com/adraf/?hl=en-gb">adraf</a>
+    </div>
+  </footer>
+  <script src="vidGallery.js"></script>
+  <script src="brgmenu.js"></script>
+</body>
+</html>

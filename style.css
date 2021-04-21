@@ -1,0 +1,1424 @@
+body {
+  font-family: 'Hind', sans-serif;
+  margin: 0 auto;
+  background-color: rgb(245, 235, 244);
+}
+
+header {
+  height: auto;
+  display: block;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: rgb(245, 235, 244);
+}
+
+/* don't display on mobile */
+.top-links, .top-links-main {
+  display: none;
+}
+
+/* mobile burger menu */
+.burger {
+  position: absolute;
+  /* always keep burger menu on top of everything */
+  z-index: 10;
+  top: 20px;
+  right: 20px;
+  width: 36px;
+  height: 36px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  /* show the menu image */
+  background-image: url(./images/iconmonstr-menu-1.svg);
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.burger:focus {
+  outline-color: white;
+}
+
+.showClose {
+  /* menu X and make white */
+  background-image: url(./images/iconmonstr-x-mark-1.svg);
+  filter:  invert(1);
+}
+
+.showClose:focus {
+  outline-color: rgb(10, 20, 11);
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: black;
+  width: 100vw;
+  height: 90vh;
+  overflow: hidden;
+  color: rgb(245, 235, 244);
+  /* hide the menu above the screen by default */
+  transform: translateY(-100%);
+  /* transition adds a little animation when sliding in and out of the menu */
+  transition: transform 0.25s ease;
+  z-index: 9;
+  padding-bottom: 10vh;
+}
+
+.showNav {
+  /* show the menu */
+  transform: translateY(0);
+}
+
+.navbar ul {
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0;
+}
+
+.navbar ul li a {
+  color: rgb(245, 235, 244);
+  padding-bottom: 10px;
+  border-bottom: 2px solid black;
+  text-decoration: none;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.navbar ul li a:hover, .navbar ul li a:focus {
+  filter: opacity(60%);
+}
+
+/*  WIP */
+.smlbrgdropdown {
+  position: relative;
+  /* display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);   */
+}
+
+.smlbrgdropbtn {
+/* .smlbrgdropdown .dropbtn { */
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);  
+  text-decoration: none;
+  padding: 0;
+  padding-bottom: 10px;
+  color: rgb(245, 235, 244);
+  background-color: black;
+  display: inline-block;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.brgdropdown-content {
+  position: relative;
+  min-width: 100vw;
+  z-index: 200;
+  margin: 0;
+  background-color: rgb(245, 235, 244);
+  text-align: center; 
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease-out;
+}
+
+.brgdropdown-content a {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  font-weight: 300;
+  letter-spacing: 1px;
+  padding: 6px;
+}
+
+.brgdropdown-content a:hover {
+  filter: opacity(60%);
+}
+
+
+/* main logo and link in mobile */
+
+.name-logo {
+  display: flex;
+  flex-direction: column;
+  height: 160px;
+  justify-content: center;
+  width: auto;
+  margin-top: 56px;
+}
+
+.name-logo img {
+  align-self: center;
+  margin-bottom: 20px;
+  height: 70px;
+}
+
+.name-logo a {
+  text-decoration: none;
+  font-size: 1.8em;
+  color: black;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  align-self: center;
+  font-weight: 600;
+}
+
+/*  social media buttons */
+.socials {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px 0;
+}
+
+.instagram, .youtube, .facebook, .share {
+  height: 30px;
+  padding: 10px;
+}
+
+.instagram:hover, .youtube:hover, .facebook:hover, .share:hover {
+  filter: opacity(60%);
+}
+
+/* hide web version of social buttons from about page */
+#socials-about-webpage {
+  display: none;
+}
+
+/* main page banner and buttons */
+.banner-main {
+  position: relative;
+  height: 50vmax;
+  width: 100%;
+}
+
+/* to give the picture opacity without affecting buttons*/
+.banner-main::before {
+  content: "";
+  background-image: url(./All_Content/Product-Photography/PLACEHOLDER.jpg);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  /* Parralax */
+  background-attachment: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.80;
+}
+
+.banner-main div {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.banner-main a {
+  text-decoration: none;
+  color: black;
+  border-radius: 100px;
+  padding: 20px 20px 16px 20px;
+  background-color: rgb(245, 235, 244);
+  min-width: 100px;
+  text-align: center;
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: 1em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.banner-main a:hover {
+  filter: opacity(60%);
+  transition: .25s ease-in-out;
+}
+
+/* mobile flex */
+.home-main-grid {
+  background-color: black;
+  padding: 20px 0;
+} 
+
+.work-boxes {
+  display: flex;
+  width: 90%;
+  height: 40vmax;
+  justify-content: space-evenly;
+  margin: 10px auto;
+  text-decoration: none;
+  color: rgb(245, 235, 244);
+  position: relative;
+}
+
+.work-boxes a {
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 75%;
+  background-position: center;
+  background-size: cover;
+}
+
+.work-boxes h3 {
+  z-index: 1;
+  position: absolute;
+  color: rgb(245, 235, 244);
+  font-weight: 400;
+  letter-spacing: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+  padding: 0;
+}
+
+.work-boxes a:hover ~ h3 {
+  display: none;
+}
+
+.work-boxes a:hover {
+  opacity: 100%;
+  transition: .35s ease-in-out;
+}
+ 
+/* work boxes main images */
+#niketown a {
+  background-image: url(./All_Content/NikeTown/Hard-in-the-Paint-Installation/PLACEHOLDER.jpg);
+  background-position: bottom;
+}
+
+#niketown-90 a {
+  background-image: url(./All_Content/NikeTown/BSMNT-Air-Max-90-Launch/PLACEHOLDER.jpg);
+  background-position: 64% 50%;
+  background-size: cover;
+}
+
+#sessionsproject a{
+  background-image: url(./All_Content/BlankSpace/PLACEHOLDER.jpg);
+  background-position: center;
+}
+
+#sessionslive a {
+  background-image: url(./All_Content/BlankSpace/PLACEHOLDER-Live.png);
+  background-position: center;
+}
+
+#productprojects a {
+  background-image: url(./All_Content/Product-Photography/PLACEHOLDER.jpg);
+  background-position: 50% 60%;
+}
+
+#animation a {
+  background-image: url(./All_Content/After-Effects-Promos/PLACEHOLDER.png);
+  background-position: center;
+}
+
+#designprojects a {
+  background-image: url(./All_Content/Design/PLACEHOLDER.png);
+  background-position: 50% 20%;
+}
+
+#veganallsorts a {
+  background-image: url(./All_Content/Vegan-Allsorts/PLACEHOLDER.png);
+  background-position: center;
+}
+
+/* modal css */
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 20;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0; 
+  right: 0;
+  margin: auto;
+  padding: 0;
+  width: 85%;
+  max-width: 900px;
+}
+
+/* These CSS rules apply to photography modal too */
+
+/* The Close Button */
+.close {
+  color: rgb(245, 235, 244);
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: auto;
+  padding: 16px;
+  color: rgb(245, 235, 244);
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black opaque background colour */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+/* modal css^^ */
+
+.mySlides video {
+  max-height: 90vh;
+}
+
+/* video caption in modal */
+.caption-container {
+  position: absolute;
+  bottom: -10vh;
+  z-index: 40;
+
+  left: 0;
+  right: 0;
+  text-align: center;
+  background-color: black;
+  padding: 0;
+  color: rgb(245, 235, 244);
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.caption-container p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Learn more button on main page */
+#button {
+  display: flex;
+  height: 65px;
+  width: 250px;
+  margin: 20px auto 50px auto;
+  justify-content: center;
+}
+
+.about-button {
+  text-decoration: none;
+  padding: 20px 20px 18px 20px;
+  color: rgb(245, 235, 244);
+  background-color: black;
+  border-radius: 100px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  align-self: center;
+}
+
+.about-button:hover {
+  filter: opacity(60%);
+}
+
+/* CONTACT PAGE */
+.contact-main {
+  background-color: black;
+  text-align: center;
+  color: rgb(245, 235, 244);
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.contact-image {
+  background-image: url(./All_Content/Product-Photography/Low1-05.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 45vmax;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.contact-main article {
+  margin: 0 auto 20px auto;
+  padding: 0 50px;
+  max-width: 1000px;
+  font-weight: 400;
+}
+
+.contact-main h2 {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1.8em;
+  letter-spacing: 1.5px;
+}
+
+.email-button {
+  text-decoration: none;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 20px 40px 18px 40px;
+  color: black;
+  background-color: rgb(245, 235, 244);
+  border-radius: 100px;
+  display: inline-block;
+}
+
+.email-button:hover, #form-submit-button:hover {
+  filter: opacity(60%);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 30px;
+}
+
+form p {
+  margin: 10px 0 5px 0;
+}
+
+#form-name, #form-email, #form-phone, #form-dropdown, #form-textbox {
+display: flex;
+flex-direction: column;
+width: 65%;
+align-self: center;
+}
+
+form input, form select, #form-textbox textarea {
+border: 0;
+padding: 4px;
+}
+
+form input, form select, form textarea:focus {
+outline-color: rgb(0, 0, 0, 0.4);
+}
+
+#form-textbox textarea {
+  resize: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#form-submit-button {
+  align-self: center;
+  line-height: 26px;
+  border: none;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 20px 40px 18px 40px;
+  color: black;
+  background-color: rgb(245, 235, 244);
+  border-radius: 100px;
+  font-family: 'Hind', sans-serif;
+  margin-top: 15px;
+  -webkit-appearance: none;
+}
+
+.madeby {
+  font-size: 0.6em;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  margin: 40px auto 20px auto;
+  font-weight: 300;
+}
+.madeby a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.5);
+  padding: 20px 0;
+}
+
+.madeby a:hover {
+  color: black;
+}
+
+#madebyWhiteFont {
+  display: none;
+}
+
+/* ABOUT PAGE */
+.about-main {
+  background-color: rgb(245, 235, 244);
+  text-align: center;
+  color: black;
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+
+.about-main h2 {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1.8em;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+
+.about-main article {
+  font-weight: 400;
+}
+
+.about-main h2, .about-main article {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.about-profile-image {
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  background-image: url(./images/Dan-Profile-Image.jpg);
+  background-position: 27% 40%;
+  background-size: 130%;
+}
+
+.contact-button {
+  text-decoration: none;
+  padding: 20px 20px 18px 20px;
+  color: rgb(245, 235, 244);
+  background-color: black;
+  border-radius: 100px;
+  display: inline-block;
+  margin-top: 20px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.contact-button:hover {
+  filter: opacity(60%);
+}
+
+/* VIDEOGRAPHY PAGE */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);  
+  margin-bottom: 20px;
+}
+
+.dropbtn {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);  
+  text-decoration: none;
+  padding: 20px 20px 18px 20px;
+  color: black;
+  background-color: rgb(245, 235, 244);
+  border-radius: 100px;
+  display: inline-block;
+  cursor: pointer;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: none;
+}
+
+.dropdown-content {
+  position: relative;  
+  background-color: rgba(245, 235, 244);
+  min-width: 160px;
+  z-index: 1;
+  margin: 0;
+  list-style-type: none;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 0 10px;
+  text-align: center; 
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease-out;
+}
+
+.dropdown-content li {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+}
+
+
+.dropdown-content li:hover {
+  filter: opacity(60%);
+}
+
+.dropbtn:hover {
+  opacity: 60%;
+}
+
+.dropbtn:focus {
+  outline-color: white;
+}
+
+
+.video-main h2 {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1.8em;
+  letter-spacing: 1.5px;
+  margin: 30px 0;
+  color: rgb(245, 235, 244);
+  align-self: center;
+}
+
+.video-main {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  background-color: black;
+}
+
+.video-boxes {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.video-boxes video {
+  width: 100%;
+  max-width: 1280px;
+  max-height: 40vh;
+}
+
+.item {
+  display: none;
+  width: 90%;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.video-boxes .item h4 {
+  color: rgb(245, 235, 244);
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.show {
+  display: block;  
+}
+
+/* Photography and Project Pages */
+
+.project-main, .photo-main {
+  background-color: black;
+  padding-bottom: 15px;
+}
+
+.project-main h2, .video-main-projects h2 {
+  font-weight: 600;
+  font-size: 1.6em;
+  letter-spacing: 1.5px;
+  padding: 30px 0;
+  margin: 0 auto;
+  color: rgb(245, 235, 244);
+  text-align: center;
+  background-color: black;
+  max-width: 80vw;
+}
+
+.projectgallery, .photogallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: 200px;
+  grid-gap: 5px;
+  grid-auto-flow: dense;
+}
+
+.projectgallery figure, .photogallery figure {
+  margin: 0;
+  padding: 0;
+}
+
+.projectgallery img, .projectgallery video, .photogallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.projecthorizontal {
+  grid-column: span 2;
+}
+
+.projectvertical {
+  grid-row: span 2;
+}
+
+.projectbig {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.projectsmall {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.projectvideo{
+  grid-column: span 2;
+}
+
+#hitptitle-card img {
+ object-position: 50% 70%;
+}
+
+.video-main-projects {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  background-color: black;
+}
+
+.video-boxes-single video {
+  width: 100%;
+  max-width: 1280px;
+  max-height: 40vh;
+}
+
+.video-boxes-single {
+  width: 90%;
+  align-self: center;
+  margin-bottom: 20px;
+}
+
+.video-boxes-single h4 {
+  color: rgb(245, 235, 244);
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+
+/* Photography Page */
+
+.photo-main h2 {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1.8em;
+  letter-spacing: 1.5px;
+  padding: 30px 0;
+  margin: 0;
+  color: rgb(245, 235, 244);
+  text-align: center;
+  background-color: black;
+}
+
+/* Photo Gallery Modal */
+
+/* The Modal (background) */
+.modalpics {
+  display: none;
+  position: fixed;
+  z-index: 20;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-gallery-content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 0;
+  width: 85%;
+  max-width: 900px;
+}
+
+/* For mobile with no hover option */
+@media (hover: none) {
+
+  /* stop parallax on mobile */
+  .banner-main::before {
+    background-attachment: scroll;
+  }
+  /* video filter dropdown */
+  .dropdown:focus .dropdown-content {display: block;}
+
+}
+
+
+/* Landscape option */
+@media (orientation: landscape) {
+
+/* Project portrait pictures in modal will be resized to fit landscape view */
+
+  #portraitpic[style] {
+    width: 60vmin !important;
+    margin-left: calc(50% - (60vmin / 2));
+  }
+}
+
+
+@media (orientation: landscape) and (max-width: 823px) {
+
+  /* Caption in video projects in landscape */
+  .caption-container {
+    display: none;
+  }
+
+  .modal-content {
+    width: 75%;
+    max-width: 700px;
+  }
+}
+
+  /*  Standard iPad  */
+@media(min-width: 768px) {
+
+  .banner-main div {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    height: inherit;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Grid home page */
+  .home-main-grid {
+    display: flex;
+    margin: 0 auto 20px auto;
+    flex-wrap: wrap;
+  }
+
+  .work-boxes {
+    width: 47%;
+    height: 25vmax;
+  }  
+
+  #niketown-90 a {
+  background-position: 66% 50%;
+  background-size: cover;
+  }
+}
+
+  
+/* iPad Pro */
+@media (min-width: 1024px) {
+
+  /* top nav bar */
+  .burger {
+    display: none;
+  }
+
+  header {
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 80px;
+  }
+
+  .name-logo {
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    justify-content: center;
+    width: 35vw;
+    margin: 0;
+  }
+
+  .name-logo img {
+    align-self: center;
+    margin: 0 15px;
+    height: 60px;
+  }
+
+  .name-logo a {
+    align-self: flex-end;
+    height: 60px;
+  }
+
+  /* hide socials button until top nav is wide enough */
+  .socials {
+    display: none;
+  }
+
+  .top-links, .top-links-main {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: flex-end;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  
+  .top-links-main ul {
+    display: inline-flex;
+    justify-content: space-around;
+    padding-right: 10px;
+    margin-right: 10px;
+  }
+
+  .top-links ul {
+    display: inline-flex;
+    justify-content: space-around;
+    padding-right: 10px;
+    margin-right: 10px;
+  }
+  
+  .top-links a, .top-links-main a {
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0 10px;
+    color: black;
+    letter-spacing: 1px;
+  }
+   
+  /* Animated nav bar line on hover */
+
+  .top-links a:after, 
+  .top-links-main a:after,
+  .top-links a:before,
+  .top-links-main a:before {
+    transition: all .5s;
+  }
+  .top-links a:hover, 
+  .top-links-main a:hover {
+    filter: opacity(60%);
+  }
+
+  .top-links a, 
+  .top-links-main a {
+  position: relative;
+  }
+
+  .top-links a:after, 
+  .top-links-main a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #aaa;
+    height: 1px;
+  }
+  .top-links a:hover:after, 
+  .top-links-main a:hover:after {
+    width: 100%;
+  }
+
+  #disable-hover {
+    pointer-events: none;
+  }
+
+  footer .socials {
+    display: flex;
+    width: 50%;
+    margin: 20px auto;
+  }
+
+
+  /* Dropdown nav bar */
+
+  .smalldropdown {
+    display: flex;
+    position: relative;
+  }
+
+  .smalldropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(245, 235, 244);
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 10px;
+    top: 30px;
+  }
+
+  .smalldropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .smalldropdown-content a:hover {filter: opacity(60%);}
+
+  .smalldropdown:hover .smalldropdown-content {display: block;}
+
+  .smalldropdown:hover .navdropbtn {filter: opacity(60%);}
+
+  /* Grid home page - split to three */
+
+  .work-boxes {
+    width: 30%;
+    height: 20vmax;
+  } 
+
+  /* About - Web Page */
+
+  .about-main {
+    display: grid;
+    grid-template-columns: 60% 20% 20%;
+    /* grid-template-rows: 30% 30% 10% 10% 10% 10%;  */
+    grid-template-rows: 10% 10% 30% 30% 10% 10%;
+    height: 70vmin;
+  }
+
+  .about-main h2 {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin: 0;
+  }
+  
+  .about-profile-image {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 5;
+    height: 36vmin;
+    width: 36vmin;
+  }
+  
+  .contact-button {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    margin: auto auto;   
+  }
+  
+  .about-main article {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 5;
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+
+  /* social button to display differently on the about page on larger screens */
+  #socials-about-webpage {
+    display: flex;
+    align-self: center;
+    justify-content: space-evenly;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    margin-top: 9px;
+  }
+
+  /* hide mobile social buttons on about page only */
+  #footer-mobile {
+    display: none;
+  }
+
+  /*  Contact - Web Page */
+
+  /*  make the entire background black on contact page */
+  #body-contact-page {
+    background-color: black;
+  }
+
+
+/* PHP Page CSS */
+.contact-main {
+    display: grid;
+    grid-template-columns: 2.5% 57.5% 2.5% 35% 2.5%;
+    grid-template-rows: 5% 10% 20% 15% 20% 20% 10%;
+    height: 80vmin;
+  }
+
+  .contact-main h2 {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin: 0;
+  }  
+
+  .contact-main article {
+    display: flex;
+    margin: 0 auto;
+    align-self: center;
+    justify-self: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+
+  /* Original button included */
+  .email-button {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 7;
+    grid-row-end: 8;
+    margin: auto auto;   
+  }
+
+  .contact-image {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 6;
+    height: 90%;
+    width: 90%;
+  }
+
+  #socials-contact-webpage {
+    display: flex;
+    align-self: center;
+    justify-content: space-evenly;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 6;
+    grid-row-end: 7;
+    filter:  invert(1);
+    margin-top: 9px;
+  }
+
+  /* Contact Form Grid */
+  form {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 8;
+    display: grid;
+    grid-template-columns: 45% 10% 45%;
+    grid-template-rows: 20% 2.5% 20% 2.5% 30% 10% 15%;
+    margin: 0;
+    }
+
+  form p {
+      margin: 0 0 3px 0;
+  }
+
+  #form-name, #form-email, #form-phone, #form-dropdown {
+    display: flex;
+    justify-self: center;
+  }
+
+  #form-name {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  #form-email {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  #form-phone {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+
+  #form-dropdown {
+    width: auto;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+
+  #form-textbox {
+    justify-self: center;   
+    align-self: center;
+    width: 80%;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+
+  #form-textbox textarea {
+    justify-self: center;
+  }
+
+  #form-submit-button {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 7;
+    grid-row-end: 8;
+    margin: auto auto;
+  }
+
+  /* hide mobile social buttons on contact page only */
+  #footer-mobile {
+    display: none;
+  }
+
+  /* For black background */
+  #madebyWhiteFont {
+    display: block;
+  }
+
+  #madebyWhiteFont, #madebyWhiteFont a {
+    color: rgb(255, 255, 255, 0.5);
+  }
+
+  #madebyWhiteFont a:hover{
+    color: white;
+  }
+
+  /* Video Page */
+  
+  .item {
+    display: none;
+    width: 50%;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .video-boxes video {
+    width: 90%;
+    margin: 20px auto;
+    max-height: 40vh;
+  }
+
+  .show {
+    display: block;  
+  }
+
+  /* Project Pages */
+  /* single video project pages */
+  .video-boxes-single {
+    width: 60%;
+    align-self: center;
+  }
+}
+
+@media (hover: none) {
+
+  /* Remove hover menu for ipad Pro */
+  .smalldropdown {
+    display: none;
+  }
+
+  .navdropbtn {
+    display: none;
+  }
+}
+
+/* hide social buttons in top nav until screen is wide enough */
+@media (min-width: 1200px) {
+
+  .top-links-main ul {
+    border-right: 2px solid black;
+  }
+
+  /* adds social to top menu nav on phot and video pages */
+  #photovid-nav ul {
+    border-right: 2px solid black;
+  }
+
+  .socials {
+    display: flex;
+    align-items: center;
+    width: 20%;
+    height: 100%;
+    margin: 0;
+  }
+
+  footer .socials {
+    display: none;
+  }
+  
+}
