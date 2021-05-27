@@ -97,16 +97,11 @@ header {
   filter: opacity(60%);
 }
 
-/*  WIP */
 .smlbrgdropdown {
   position: relative;
-  /* display: inline-block;
-  left: 50%;
-  transform: translateX(-50%);   */
 }
 
 .smlbrgdropbtn {
-/* .smlbrgdropdown .dropbtn { */
   position: relative;
   left: 50%;
   transform: translateX(-50%);  
@@ -166,6 +161,7 @@ header {
   align-self: center;
   margin-bottom: 20px;
   height: 70px;
+  width: 70px;
 }
 
 .name-logo a {
@@ -187,6 +183,7 @@ header {
 
 .instagram, .youtube, .facebook, .share {
   height: 30px;
+  width: 30px;
   padding: 10px;
 }
 
@@ -311,13 +308,18 @@ header {
   background-size: cover;
 }
 
+#niketown-movetozero a {
+  background-image: url(./All_Content/NikeTown/NikeTown-MovetoZero/NikeTown-London-Move-to-Zero.jpeg);
+  background-position: center;
+}
+
 #sessionsproject a{
   background-image: url(./All_Content/BlankSpace/PLACEHOLDER.jpg);
   background-position: center;
 }
 
 #sessionslive a {
-  background-image: url(./All_Content/BlankSpace/PLACEHOLDER-Live.png);
+  background-image: url(./All_Content/BlankSpace/PLACEHOLDER-Live.jpg);
   background-position: center;
 }
 
@@ -327,17 +329,17 @@ header {
 }
 
 #animation a {
-  background-image: url(./All_Content/After-Effects-Promos/PLACEHOLDER.png);
+  background-image: url(./All_Content/After-Effects-Promos/PLACEHOLDER.jpg);
   background-position: center;
 }
 
 #designprojects a {
-  background-image: url(./All_Content/Design/PLACEHOLDER.png);
+  background-image: url(./All_Content/Design/PLACEHOLDER.jpg);
   background-position: 50% 20%;
 }
 
 #veganallsorts a {
-  background-image: url(./All_Content/Vegan-Allsorts/PLACEHOLDER.png);
+  background-image: url(./All_Content/Vegan-Allsorts/PLACEHOLDER.jpg);
   background-position: center;
 }
 
@@ -998,6 +1000,7 @@ outline-color: rgb(0, 0, 0, 0.4);
     align-self: center;
     margin: 0 15px;
     height: 60px;
+    width: 60px;
   }
 
   .name-logo a {
