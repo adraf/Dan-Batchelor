@@ -14,12 +14,11 @@ Due to the size of the images and videos I have not included the media folder. Y
 - Javascript
 - PHP
 
-## Process
-
-
 ## Featured Code
 
-With my limited Javascript understanding at the time, this is what took the most time in the project. The issue I was facing was that I could get the slides to cycle through the different videos, but the sound would continue on in the background. With a lot of trial and error and the help of Stack Overflow, I found I needed to add in an extra function to pause each video, and add that to the functions controlling the next, previous and close buttons. 
+### Modal Box
+
+With my limited Javascript understanding at the time, the media modal boxes are what took the most time in the project. The issue I was facing was that I could get the slides to cycle through the different videos, but the sound would continue on in the background. With a lot of trial and error and the help of Stack Overflow, I found I needed to add in an extra function to pause each video, and add that to the functions controlling the next, previous and close buttons.
 
 ```
 var modalDiv;
@@ -76,6 +75,57 @@ function showSlides(id, n) {
 
 I then used these modal boxes within the photography and project sections of the site, to be able to cycle through the images. The thought of users having to open and close each indivisual image to get a higher resolution version didn't make sense, so the ability to cycle through all images once you have opened the higher resolution version, worked best.
 
+### Video Filter
+
+I wanted users to have the ability to filter all the video content on the videography page by project if they wished. This was brokem up into the ability to show all (the default view on opening the page), and the filter function, based on which menu option the user had clicked. 
+
+```
+// Video Filter
+var filterItems = document.querySelectorAll('.item')
+var listItems = document.querySelectorAll('.filter-list-item');
+
+function showAll() {
+  filterItems.forEach(function(element) {
+     element.classList.add('show')
+  })
+}
+
+function showCategory(category) {
+  filterItems.forEach(function(element){
+      if (element.classList.contains(category)) {
+          element.classList.add('show')
+      }
+      else {
+          element.classList.remove('show')
+      }
+  })
+}
+showAll()
+
+```
+
+The user can use the dropdown menu to select which project they wish to view, which would then filter using the div class on each video. 
+
+```
+<div class="dropdown">
+    <button class="dropbtn">Filter Projects</button>
+    <ul class="dropdown-content">
+      <li class="filter-list-item" id="all" onclick="showAll()">All Items</li>
+      <li class="filter-list-item" onclick="showCategory('category-nike')">Nike</li>
+      <li class="filter-list-item" onclick="showCategory('category-BSpace')">BlankSpace</li>
+      <li class="filter-list-item" onclick="showCategory('category-AfterEff')">After Effects</li>
+      <li class="filter-list-item" onclick="showCategory('category-vegan')">Vegan Allsorts</li>
+    </ul>
+</div>
+```
+
+
+```
+<div class="item category-nike">
+      <video src="./All_Content/NikeTown/NikeTown-MovetoZero/MTZ.m4v" controls></video>
+      <h4 class="video-title">NikeTown London: Move to Zero</h4>
+</div>
+```
 
 ## Challenges
 
