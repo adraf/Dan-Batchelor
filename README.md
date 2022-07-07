@@ -73,11 +73,11 @@ function showSlides(id, n) {
 }
 ```
 
-I then used these modal boxes within the photography and project sections of the site, to be able to cycle through the images. The thought of users having to open and close each indivisual image to get a higher resolution version didn't make sense, so the ability to cycle through all images once you have opened the higher resolution version, worked best.
+I then used these modal boxes within the photography and project sections of the site, to be able to cycle through the images. The thought of users having to open and close each individual image to get a higher resolution version didn't make sense, so the ability to cycle through all images once you have opened the higher resolution version worked best.
 
 ### Video Filter
 
-I wanted users to have the ability to filter all the video content on the videography page by project if they wished. This was brokem up into the ability to show all (the default view on opening the page), and the filter function, based on which menu option the user had clicked. 
+I wanted users to have the ability to filter all the video content on the videography page by project if they wished. This was broken up into the ability to show all (the default view on opening the page), and the filter function, based on which menu option the user had clicked. 
 
 ```
 // Video Filter
@@ -129,11 +129,11 @@ The user can use the dropdown menu to select which project they wish to view, wh
 
 ## Challenges
 
-A long time was spent on being able to get the modal boxes to scroll throiugh video content without having the sound continue to play. At the time I was very new to Javascript and having to cobble together functions from different solutions I was finding using Stack Overflow. 
+A long time was spent on being able to get the modal boxes to scroll through video content without having the sound continue to play. At the time I was very new to Javascript and having to cobble together functions from different solutions I was finding using Stack Overflow. 
 
 ## Wins
 
-- **CSS Grid:** I feel most comfortable with Flexbox in CSS, so I wanted to also try Grid to see what I could create. I grouped the different sized images into different classes (landscape, portrait and feature images) so that I could have more control on placement and reducing any blank spaces.
+- **CSS Grid:** I feel most comfortable with Flexbox in CSS, so I wanted to also try Grid to see what I could create. I grouped the different sized images into different classes (landscape, portrait and feature images) so that I could have more control on placement and reduce any blank spaces.
 - **JS filtering:** I wanted to be able to let users filter the videography page by project if needed.
 - **PHP:** This was only a small amount but I enjoyed getting it to work so that users can submit a form to enquire about working with Dan.
 
@@ -144,5 +144,6 @@ From this project I understood that I needed to get a stronger grip on Javascrip
 
 ## Future Content
 
-- Use Google verification for users to go through in the conatct form submission.
+- Use Google verification for users to go through in the contact form submission.
+
 
