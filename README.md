@@ -4,21 +4,21 @@
 ## Project Overview
 I worked with Dan to get an idea of website designs he liked, and what he wanted visitors to the site to be able to see and do. As we worked through the design I added in more functionality so that users could see more of his portfolio work by type and filter content by projects.
 
-This site was built using HTML, CSS and Javascript, with some PHP for the contact form.
+This site was built using HTML, CSS and JavaScript, with some PHP for the contact form.
 Due to the size of the images and videos I have not included the media folder. You can see the full site here: http://danbatch.com/
 
 ## Technologies Used
 
 - HTML5
 - CSS3
-- Javascript
+- JavaScript
 - PHP
 
 ## Featured Code
 
 ### Modal Box
 
-With my limited Javascript understanding at the time, the media modal boxes are what took the most time in the project. The issue I was facing was that I could get the slides to cycle through the different videos, but the sound would continue on in the background. With a lot of trial and error and the help of Stack Overflow, I found I needed to add in an extra function to pause each video, and add that to the functions controlling the next, previous and close buttons.
+With my limited JavaScript understanding at the time, the media modal boxes are what took the most time in the project. The issue I was facing was that I could get the slides to cycle through the different videos, but the sound would continue on in the background. With a lot of trial and error and the help of Stack Overflow, I found I needed to add in an extra function to pause each video, and add that to the functions controlling the next, previous and close buttons.
 
 ```
 var modalDiv;
@@ -129,7 +129,7 @@ The user can use the dropdown menu to select which project they wish to view, wh
 
 ## Challenges
 
-A long time was spent on being able to get the modal boxes to scroll through video content without having the sound continue to play. At the time I was very new to Javascript and having to cobble together functions from different solutions I was finding using Stack Overflow. 
+A long time was spent on being able to get the modal boxes to scroll through video content without having the sound continue to play. At the time I was very new to JavaScript and having to cobble together functions from different solutions I was finding using Stack Overflow. 
 
 ## Wins
 
@@ -140,10 +140,8 @@ A long time was spent on being able to get the modal boxes to scroll through vid
 
 ## Key Learnings
 
-From this project I understood that I needed to get a stronger grip on Javascript to better understand functions, so that I could confidently make future sites more interactive for users. 
+From this project I understood that I needed to get a stronger grip on JavaScript to better understand functions, so that I could confidently make future sites more interactive for users. 
 
 ## Future Content
 
 - Use Google verification for users to go through in the contact form submission.
-
-
