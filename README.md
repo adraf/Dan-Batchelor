@@ -1,6 +1,10 @@
 # Dan Batchelor Photography and Videography Portfolio
 ### Completed April 2021
 
+**Time Frame**
+
+I completed this project in my spare time, around my full time role. This took around 40 hours.
+
 ## Project Overview
 I worked with Dan to get an idea of website designs he liked, and what he wanted visitors to the site to be able to see and do. As we worked through the design I added in more functionality so that users could see more of his portfolio work by type and filter content by projects.
 
@@ -119,7 +123,6 @@ The user can use the dropdown menu to select which project they wish to view, wh
 </div>
 ```
 
-
 ```
 <div class="item category-nike">
       <video src="./All_Content/NikeTown/NikeTown-MovetoZero/MTZ.m4v" controls></video>
@@ -134,7 +137,7 @@ A long time was spent on being able to get the modal boxes to scroll through vid
 ## Wins
 
 - **CSS Grid:** I feel most comfortable with Flexbox in CSS, so I wanted to also try Grid to see what I could create. I grouped the different sized images into different classes (landscape, portrait and feature images) so that I could have more control on placement and reduce any blank spaces.
-- **JS filtering:** I wanted to be able to let users filter the videography page by project if needed.
+- **JavaScript filtering:** I wanted to be able to let users filter the videography page by project if needed.
 - **PHP:** This was only a small amount but I enjoyed getting it to work so that users can submit a form to enquire about working with Dan.
 
 
